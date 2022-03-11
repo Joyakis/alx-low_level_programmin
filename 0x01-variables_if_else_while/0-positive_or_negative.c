@@ -9,12 +9,15 @@
  */
 int main(void)
 {
-int n;
-printf("Enter n\n")
-scanf("%d, $n);
-if (n < 0.00)
-printf("n is negative\n")
-else if (n > 0.00)
-printf("n is positive\n");                                                      elseprintf("n is zero\n");	
-return(0);
+	int n;
+
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	if (n > 0)
+		printf("%d is positive\n", n);
+	else if (n == 0)
+		printf("%d is zero\n", n);
+	else if (n < 0)
+		printf("%d is negative\n", n);
+	return (0);
 }
