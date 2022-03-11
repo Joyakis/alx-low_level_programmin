@@ -7,13 +7,13 @@
 int main(void)
 {
 	int n;
-printf("Enter n.\N")
+printf("Enter n.\n")
 scan f("%d , &n);
 if(n < 0)
-printf("n is negative\N")
+printf("n is negative\n")
 else if (n > 0)
-printf("n is positive\N")
+printf("n is positive\n")
 else
-printf("n is zero\N");
+printf("n is zero\n");
 return (0);
 }
