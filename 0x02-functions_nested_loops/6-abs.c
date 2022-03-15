@@ -22,7 +22,4 @@ int _abs(int n)
 		return (n);
 	}
 }
-© 2022 GitHub, Inc.
-Terms
-Privacy
 
