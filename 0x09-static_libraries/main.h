@@ -1,6 +1,6 @@
 #ifndef _MAIN_H_
 #define _MAIN_H_
-#include stdio.h
+#include main.h
 
 int _putchar(char c);
 int _islower(int c);
