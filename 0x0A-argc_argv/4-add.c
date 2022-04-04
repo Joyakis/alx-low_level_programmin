@@ -1,25 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <ctype.h>
 /**
- * main - Entry point
- * Description: a program that multiplies two numbers.
- * @argc: number of cli arguments
- * @argv: a Vector containing the cli arguments
- *
- * Return: Always 0 (Success)
+ * main - adds positive numbers.
+ * @argc: number of command line arguments.
+ * @argv: array that contains the program command line arguments.
+ * Return: 0 - success.
  */
-
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	int product;
+	int i, j, add = 0;
 
-	if (argc != 3)
-		puts("Error");
-	else
+	for (i = 1; i < argc; i++)
 	{
-		product = atoi(argv[1]) * atoi(argv[2]);
-		printf("%d\n", product);
+		for (j = 0; argv[i][j] != '\0'; j++)
+		{
+			if (!isdigit(argv[i][j]))
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
+		add += atoi(argv[i]);
 	}
+	printf("%d\n", add);
 	return (0);
 }
